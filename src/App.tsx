@@ -143,7 +143,7 @@ function App() {
           }}
         >
           <img
-            src="src\assets\helmet2.png" // If in public folder. If in src/assets, use: {require('./assets/helmet.png')}
+            src="src\assets\helmet3.png" // If in public folder. If in src/assets, use: {require('./assets/helmet.png')}
             alt="AI Helmet"
             className="w-70 h-70 sm:w-96 sm:h-96 object-contain drop-shadow-2xl"
             draggable={false}
