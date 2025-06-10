@@ -53,11 +53,11 @@ function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <Shield className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold text-white">SmartHelmet AI</span>
+              <span className="text-xl font-bold text-white">AI Helmet</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['Features', 'Safety', 'Pricing', 'Reviews'].map((item) => (
+              {['Features', 'Safety', 'Reviews'].map((item) => (
                 <a 
                   key={item}
                   href={`#${item.toLowerCase()}`} 
@@ -133,7 +133,8 @@ function App() {
           </div>
         </div>
 
-        {/* 3D Helmet Visualization */}
+        {/*  Helmet Visualization */}
+         {/* 3D Helmet Visualization */}
         <div 
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
           style={{
@@ -141,47 +142,16 @@ function App() {
             opacity: helmetOpacity,
           }}
         >
-          <div className="relative">
-            <div className="w-80 h-80 sm:w-96 sm:h-96 relative">
-              {/* Helmet Shape */}
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 rounded-t-full rounded-b-3xl shadow-2xl">
-                {/* Visor */}
-                <div className="absolute top-16 left-8 right-8 h-32 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-teal-900/80 rounded-2xl backdrop-blur-sm border border-blue-400/30">
-                  <div className="absolute inset-2 bg-gradient-to-r from-blue-500/20 to-teal-500/20 rounded-xl flex items-center justify-center">
-                    <Eye className="h-12 w-12 text-blue-300" />
-                  </div>
-                </div>
-                
-                {/* LED Indicators */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
-                </div>
-
-                {/* Status Indicators */}
-                <div className="absolute top-20 right-4 space-y-1">
-                  <Wifi className="h-4 w-4 text-green-400" />
-                  <Battery className="h-4 w-4 text-blue-400" />
-                  <Signal className="h-4 w-4 text-teal-400" />
-                </div>
-
-                {/* Side Vents */}
-                <div className="absolute top-24 left-2 w-8 h-16 bg-slate-800 rounded-r-lg opacity-80"></div>
-                <div className="absolute top-24 right-2 w-8 h-16 bg-slate-800 rounded-l-lg opacity-80"></div>
-                
-                {/* Chin Guard */}
-                <div className="absolute bottom-4 left-12 right-12 h-8 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full"></div>
-              </div>
-
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-transparent to-teal-400/20 rounded-t-full rounded-b-3xl blur-xl"></div>
-            </div>
-          </div>
+          <img
+            src="src\assets\helmet2.png" // If in public folder. If in src/assets, use: {require('./assets/helmet.png')}
+            alt="AI Helmet"
+            className="w-70 h-70 sm:w-96 sm:h-96 object-contain drop-shadow-2xl"
+            draggable={false}
+          />
         </div>
 
         {/* Scroll Indicator */}
-        <div 
+        {/* <div 
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60"
           style={{ opacity: 1 - scrollProgress * 2 }}
         >
@@ -191,8 +161,8 @@ function App() {
               <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
             </div>
           </div>
-        </div>
-      </section>
+        </div> */}
+      </section> 
 
       {/* Content inside helmet view */}
       <div 
@@ -309,113 +279,6 @@ function App() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 bg-gradient-to-b from-slate-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Flexible pricing options designed to meet the needs of teams and enterprises of all sizes.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[
-                {
-                  name: "Basic",
-                  price: "$299",
-                  period: "per helmet",
-                  description: "Perfect for small teams and individual contractors",
-                  features: [
-                    "Basic AI hazard detection",
-                    "Impact protection",
-                    "8-hour battery life",
-                    "Mobile app integration",
-                    "Basic reporting",
-                    "Email support"
-                  ],
-                  popular: false
-                },
-                {
-                  name: "Professional",
-                  price: "$499",
-                  period: "per helmet",
-                  description: "Ideal for construction companies and industrial sites",
-                  features: [
-                    "Advanced AI capabilities",
-                    "360° vision system",
-                    "12-hour battery life",
-                    "Real-time communication",
-                    "Advanced analytics",
-                    "24/7 priority support",
-                    "Emergency response system"
-                  ],
-                  popular: true
-                },
-                {
-                  name: "Enterprise",
-                  price: "Custom",
-                  period: "pricing",
-                  description: "Tailored solutions for large organizations",
-                  features: [
-                    "Full AI suite",
-                    "Custom integrations",
-                    "Unlimited battery life",
-                    "Fleet management",
-                    "Custom reporting",
-                    "Dedicated support team",
-                    "On-site training",
-                    "Compliance management"
-                  ],
-                  popular: false
-                }
-              ].map((plan, index) => (
-                <div 
-                  key={index} 
-                  className={`relative p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-br from-blue-600 to-teal-600 text-white shadow-2xl scale-105' 
-                      : 'bg-white text-slate-900 shadow-lg hover:shadow-xl border border-slate-200'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-slate-900 px-6 py-2 rounded-full text-sm font-bold">
-                      Most Popular
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      {plan.period && <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-slate-600'}`}> {plan.period}</span>}
-                    </div>
-                    <p className={`${plan.popular ? 'text-white/80' : 'text-slate-600'}`}>{plan.description}</p>
-                  </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className={`h-5 w-5 flex-shrink-0 ${plan.popular ? 'text-white' : 'text-teal-600'}`} />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className={`w-full py-4 rounded-full text-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-white text-blue-600 hover:bg-slate-100'
-                      : 'bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700'
-                  }`}>
-                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Testimonials Section */}
         <section id="testimonials" className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
