@@ -57,7 +57,7 @@ function App() {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['Features', 'Safety', 'Reviews'].map((item) => (
+              {['Features', 'Safety'].map((item) => (
                 <a 
                   key={item}
                   href={`#${item.toLowerCase()}`} 
@@ -85,7 +85,7 @@ function App() {
           isMenuOpen ? 'max-h-64' : 'max-h-0'
         }`}>
           <div className="px-4 pt-2 pb-3 space-y-1 bg-slate-900/95">
-            {['Features', 'Safety', 'Pricing', 'Reviews'].map((item) => (
+            {['Features', 'Safety'].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`} 
@@ -127,9 +127,9 @@ function App() {
               Discover Innovation
               <ArrowRight className="h-5 w-5" />
             </button>
-            <button className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-white/10">
+            {/* <button className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-white/10">
               Watch Demo
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -280,7 +280,7 @@ function App() {
         </section>
 
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section
         <section id="testimonials" className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -347,7 +347,7 @@ function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
@@ -361,11 +361,11 @@ function App() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 hover:bg-slate-100 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
-                Start Free Trial
+                Contact Us
               </button>
-              <button className="border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+              {/* <button className="border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
                 Schedule Demo
-              </button>
+              </button> */}
             </div>
           </div>
         </section>
@@ -384,18 +384,18 @@ function App() {
                 </p>
                 <div className="flex items-center space-x-2 text-white/70">
                   <Mail className="h-4 w-4" />
-                  <span>contact@smarthelmet.ai</span>
+                  <span>arvind2005india@gmail.com</span>
                 </div>
               </div>
 
               {[
                 {
                   title: "Product",
-                  links: ["Features", "Safety", "Pricing", "Enterprise"]
+                  links: ["Features", "Safety", "Enterprise"]
                 },
                 {
                   title: "Company", 
-                  links: ["About", "Careers", "Press", "Contact"]
+                  links: ["About", "Careers", "Contact"]
                 }
               ].map((section) => (
                 <div key={section.title}>
@@ -414,7 +414,7 @@ function App() {
             </div>
 
             <div className="border-t border-white/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-white/60">© 2024 SmartHelmet AI. All rights reserved.</p>
+              <p className="text-white/60">© 2025 SmartHelmet AI. All rights reserved.</p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 {["Privacy", "Terms", "Security"].map((link) => (
                   <a key={link} href="#" className="text-white/60 hover:text-white transition-colors duration-200">
